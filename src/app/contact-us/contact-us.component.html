@@ -1,0 +1,26 @@
+<div class="container">
+	<div class="row">
+		<form #f="ngForm" >
+			<div class="input-group">
+				
+				<span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+				<input [(ngModel)]="contact.name" name="name" type="text" class="form-control" id="usr" required="required" placeholder="Name">
+			</div><br>
+			<div class="input-group">
+				
+				 <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+				<input [(ngModel)]="contact.email" name="email" type="email" class="form-control" id="email"	required="required" pattern="[^@\s]+@[^@\s]+\.[^@\s]+" title="Invalid email address" placeholder="Email">
+			</div><br>
+			<div class="input-group">
+				
+				 <span class="input-group-addon"><i class="glyphicon glyphicon-phone-alt"></i></span>
+				<input [(ngModel)]="contact.phone" name="phone" type="tel" class="form-control" id="phone" required="required" pattern="^\d{10}$" placeholder="Phone Number">
+			</div><br>
+			<div class="form-group">
+				
+				<textarea  [(ngModel)]="contact.message" name="message" class="form-control" rows="5" id="message" required="required" placeholder="Write a message"></textarea>
+			</div>
+			<button type="submit" class="btn btn-success" (click)="addData()">Send</button>
+		</form>
+	</div>
+</div>
